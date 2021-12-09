@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Storage }  from '@ionic/storage';
 
 export interface Datos{
@@ -19,10 +18,9 @@ export class ServicedatosService {
 
   private _storage : Storage;
 
-  constructor(private storage: Storage
-    ) { 
+  constructor(private storage: Storage) { 
     this.init();
-    }
+   }
 
   async init(){
     const storage = await this.storage.create();
