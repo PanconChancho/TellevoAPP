@@ -26,6 +26,17 @@
       Login
     </ion-button>
     <br>
-    <h5 (click)='signup()'>No tienes cuenta? <ion-text color='primary'>signup here</ion-text></h5>
+    <ion-item href="/register" >
+      <ion-icon name="walk" slot="start"></ion-icon>
+      <ion-label>Crear usuario</ion-label>
+    </ion-item>  
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="/password"
+        text="Recuperar Contraseña"
+        color="primary"
+        mode="ios">
+      </ion-back-button>
+    </ion-buttons>
   </div>
 </ion-content>
