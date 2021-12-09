@@ -1,0 +1,55 @@
+<ion-header >
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+         
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-avatar>
+        <ion-img src="/assets/img/logo.jpg"></ion-img>
+      </ion-avatar>
+    </ion-buttons>
+
+    <ion-title>inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+   
+    <ion-list>
+      <ion-item *ngFor="let c of componentes"
+          [routerLink] = "c.redirecTo"
+          detail="true"> 
+          <ion-icon [name]="c.icon"
+            slot="start"
+            color="primary"></ion-icon> 
+            {{c.name}}
+      </ion-item>
+   </ion-list>
+   <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Tienes problemas de transporte?</ion-card-subtitle>
+      <ion-card-title>Nosotros te ayudamos!</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content text-color="primary">
+    Bienvenidos a TeLlevo, una aplicacion hecha por alumnos para alumnos en donde su objetivo esta en que todos y cada uno de ustedes llegue a tiempo y en las mejores condiciones a su hogar,
+    La aplicacion esta hecha para facilitar el viaje de muchos alumnos haciendo este una especie de uber exclusivo de duoc, en donde ademas de generar companerismo, podrias ganar un dinero extra haciendo un bien.
+    existiran 2 modalidades en la app, una son los conductores, cada alumno que cuente con un auto propio, podra ingresar a la app como conductor, mientras, que los que necesiten movilizacion
+    entraran a la app como pasajeros, estos estaran atentos a que un conductor pueda llevarlos o acercarlos a sus hogares, todo con el objetivo de que la modalidad presencial se haga realidad.
+    </ion-card-content>
+    <br>
+    <br>
+    <ion-img src="/assets/img/logo.jpg" ></ion-img>
+  </ion-card>
+
+   <!--
+   <ion-button routerLink="/alert">Alert</ion-button>
+   <ion-button routerLink="/action-sheet">Action Sheet</ion-button>-->
+
+    
+</ion-content>
