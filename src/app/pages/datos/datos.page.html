@@ -14,16 +14,16 @@
       </ion-avatar>
     </ion-buttons>
     <ion-title>Direcciones</ion-title>
-    
+
   </ion-toolbar>
 </ion-header>
 
 
 <ion-content>
-  
+
     <h3 class="ion-padding">En esta tabla ingresa todas las direcciones o posibles lugares en donde te acomode llegar</h3>
-  
-  
+
+
   <ion-item>
     <ion-label position="fixed">Calle</ion-label>
     <ion-input type="text" [(ngModel)]="newDato.nom" required></ion-input>
@@ -33,12 +33,12 @@
     <ion-label position="fixed">Comuna</ion-label>
     <ion-input type="text" [(ngModel)]="newDato.apellido" required></ion-input>
   </ion-item>
-  
+
   <ion-item>
     <ion-label position="fixed">Numero</ion-label>
     <ion-input type="number" [(ngModel)]="newDato.edad" required></ion-input>
   </ion-item>
-  
+
 
   <ion-button (click)="addDatos()" expand="full">
     Agregar datos

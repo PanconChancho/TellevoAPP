@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
+import { Observable } from 'rxjs';
+import { AuthService } from '../../services/auth.service';
+
 
 interface Componente{
   icon: string;
@@ -15,17 +18,14 @@ interface Componente{
 })
 export class InicioPage implements OnInit {
 
+
   componentes : Componente[] =[
     {
       icon: 'heart-circle-outline',
-      name: 'Donaciones',
+      name: 'Mapa Satelital',
       redirecTo: '/donaciones'
     },
-    {
-      icon: 'person',
-      name: 'iniciar sesion',
-      redirecTo: '/login'
-    },
+
     {
       icon: 'save',
       name: 'Registrarse',
@@ -39,13 +39,18 @@ export class InicioPage implements OnInit {
     },
     {
       icon: 'person',
-      name: 'Datos',
+      name: 'Direcciones',
       redirecTo: '/datos'
     },
+    {
+      icon: 'person',
+      name: 'Cerrar Sesion',
+      redirecTo: '/login'
+    }
 
    
   ]
-  constructor(private menuController: MenuController) { }
+  constructor(private menuController: MenuController, private authSvc: AuthService) { }
 
   ngOnInit() {
   }

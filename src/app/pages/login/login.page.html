@@ -19,13 +19,20 @@
     </ion-item>
     <br>
     <ion-item>
-      <ion-label position="stacked">Password</ion-label>
-      <ion-input [(ngModel)]='password'></ion-input>
+      <ion-label position="floating" > Contraseña</ion-label>
+      <ion-input [(ngModel)]="password" type="password" name="password"></ion-input>
     </ion-item>
-    <ion-button (click)="login()" expand="block">
-      Login
+    <ion-button (click)="login()" href="/inicio"  expand="block">
+      Entrar
     </ion-button>
     <br>
-    <h5 (click)='signup()'>No tienes cuenta? <ion-text color='primary'>signup here</ion-text></h5>
+    <ion-item href="/register" >
+      <ion-icon  ></ion-icon>
+      <ion-label>Crear usuario</ion-label>
+    </ion-item>  
+    <ion-item href="/password" >
+      <ion-icon ></ion-icon>
+      <ion-label>Recuperar Contraseña</ion-label>
+    </ion-item> 
   </div>
 </ion-content>
